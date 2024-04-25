@@ -90,8 +90,7 @@ $region["大阪府"] = "大阪市";
 foreach ($region as $x => $y) {
     if ($x === "愛知県" || $x === "大阪府") {
         echo $x."は関東地方ではありません。\n";
-    }
-    else {
+    } else {
         echo $x."の県庁所在地は、".$y."です。\n";
     }
 }
