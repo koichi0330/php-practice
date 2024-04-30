@@ -69,6 +69,7 @@ $region = [
 foreach ($region as $x => $y) {
     if ($x === "埼玉県") {
         echo $x . "の県庁所在地は、" . $y . "です。";
+        break;
     }
 }
 
@@ -110,14 +111,14 @@ echo $helloname;
 
 // Q11 関数-2
 
-function calcTaxInPrice($Price)
+function calcTaxInPrice($before)
 {
-    return  $Price * 1.1;
+    return  $before * 1.1;
 }
 
-$Price = 1000;
-$taxInPrice = calcTaxInPrice($Price);
-echo $Price . "円の商品の税込価格は" . $taxInPrice . "円です。";
+$price = 1000;
+$taxInPrice = calcTaxInPrice($price);
+echo $price . "円の商品の税込価格は" . $taxInPrice . "円です。";
 
 // Q12 関数とif文
 
@@ -142,19 +143,15 @@ function evaluateGrade($grade)
         case "A":
         case "B":
             return "合格です。\n";
-            break;
         
         case "C":
             return "合格ですが追加課題があります。\n";
-            break;
             
         case "D":
             return "不合格です。\n";
-            break;
             
         default:
             return "判定不明です。講師に問い合わせてください。\n";
-            break;
     }
 }
 
