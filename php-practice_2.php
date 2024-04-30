@@ -2,15 +2,15 @@
 // Q1 tic-tac問題
 
 $num = 1;
-for ($num = 1; $num <=100; $num++) {
+for ($num = 1; $num <= 100; $num++) {
     if ($num % 20 == 0) {
         echo "tic-tac\n";
     } elseif ($num % 4 == 0) {
-        echo "tic\n"; 
+        echo "tic\n";
     } elseif ($num % 5 == 0) {
         echo "tac\n";
     } else {
-    echo $num."\n";
+    echo $num . "\n";
     }
 }
 
@@ -35,7 +35,7 @@ $personalInfos = [
   ],
 ];
 
-echo $personalInfos[1]['name']."の電話番号は".$personalInfos[1]['tel']."です。";
+echo $personalInfos[1]['name'] . "の電話番号は" . $personalInfos[1]['tel'] . "です。";
 
 // 問題2
 $personalInfos = [
@@ -57,7 +57,7 @@ $personalInfos = [
 ];
 
 foreach ($personalInfos as $x => $y)
-echo ($x + 1)."番目の".$y['name']."のメールアドレスは".$y['mail']."で、電話番号は".$y['tel']."です。\n";
+echo ($x + 1) . "番目の" . $y['name'] . "のメールアドレスは" . $y['mail'] . "で、電話番号は" . $y['tel'] . "です。\n";
 
 // 問題3
 $personalInfos = [
@@ -102,9 +102,9 @@ class Student
     }
 }
 
-$yamada = new Student(120,"山田");
+$yamada = new Student(120, "山田");
 
-echo "学籍番号".$yamada->studentId."の生徒は".$yamada->studentName."です。";
+echo "学籍番号" . $yamada->studentId . "の生徒は" . $yamada->studentName."です。";
 
 // Q4 オブジェクト-2
 
@@ -121,11 +121,11 @@ class Student
 
     public function attend($study)
     {
-        echo $this->studentName.'は'.$study.'の授業に参加しました。学籍番号:'.$this->studentId;
+        echo $this->studentName . 'は' . $study . 'の授業に参加しました。学籍番号:' . $this->studentId;
     }
 }
 
-$yamada = new Student(120,'山田');
+$yamada = new Student(120, '山田');
 $yamada->attend('PHP');
 
 // Q5 定義済みクラス
@@ -140,7 +140,6 @@ echo $time->modify('-1 months') ->format('Y-m-d');
 $time = new DateTime('19920425');
 $now  = new DateTime();
 
-$diff = $now->diff($time);
-echo $diff->format('あの日から%a日経過しました。');
+echo $diff = $now->diff($time) ->format('あの日から%a日経過しました。');
 
 ?>
