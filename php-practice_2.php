@@ -10,7 +10,7 @@ for ($num = 1; $num <= 100; $num++) {
     } elseif ($num % 5 == 0) {
         echo "tac\n";
     } else {
-    echo $num . "\n";
+        echo $num . "\n";
     }
 }
 
@@ -56,8 +56,8 @@ $personalInfos = [
   ],
 ];
 
-foreach ($personalInfos as $x => $y)
-echo ($x + 1) . "番目の" . $y['name'] . "のメールアドレスは" . $y['mail'] . "で、電話番号は" . $y['tel'] . "です。\n";
+foreach ($personalInfos as $index => $personalInfo)
+echo ($index + 1) . "番目の" . $personalInfo['name'] . "のメールアドレスは" . $personalInfo['mail'] . "で、電話番号は" . $personalInfo['tel'] . "です。\n";
 
 // 問題3
 $personalInfos = [
@@ -80,8 +80,8 @@ $personalInfos = [
 
 $ageList = [25, 30, 18];
 
-foreach ($personalInfos as $x => $y)
-$personalInfos[$x] += ['age' => $ageList[$x]];
+foreach ($personalInfos as $index => $personalInfo)
+$personalInfos[$index] += ['age' => $ageList[$index]];
 
 // Q3 オブジェクト-1
 
@@ -104,7 +104,7 @@ class Student
 
 $yamada = new Student(120, "山田");
 
-echo "学籍番号" . $yamada->studentId . "の生徒は" . $yamada->studentName."です。";
+echo "学籍番号" . $yamada->studentId . "の生徒は" . $yamada->studentName . "です。";
 
 // Q4 オブジェクト-2
 
@@ -133,13 +133,13 @@ $yamada->attend('PHP');
 // 問題1
 
 $time = new DateTime();
-echo $time->modify('-1 months') ->format('Y-m-d');
+echo $time->modify('-1 months')->format('Y-m-d');
 
 // 問題2
 
 $time = new DateTime('19920425');
 $now  = new DateTime();
 
-echo $diff = $now->diff($time) ->format('あの日から%a日経過しました。');
+echo $diff = $now->diff($time)->format('あの日から%a日経過しました。');
 
 ?>

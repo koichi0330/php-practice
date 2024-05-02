@@ -111,9 +111,9 @@ echo $helloname;
 
 // Q11 関数-2
 
-function calcTaxInPrice($before)
+function calcTaxInPrice($preTaxPrice)
 {
-    return  $before * 1.1;
+    return  $preTaxPrice * 1.1;
 }
 
 $price = 1000;
@@ -134,7 +134,6 @@ function distinguishNum($num)
 echo distinguishNum(3);
 echo distinguishNum(30);
 
-
 // Q13 関数とswitch文
 
 function evaluateGrade($grade)
@@ -143,13 +142,10 @@ function evaluateGrade($grade)
         case "A":
         case "B":
             return "合格です。\n";
-        
         case "C":
             return "合格ですが追加課題があります。\n";
-            
         case "D":
             return "不合格です。\n";
-            
         default:
             return "判定不明です。講師に問い合わせてください。\n";
     }
